@@ -66,7 +66,7 @@ function App() {
   const getMonthValueList = (aDateString) => {
     const date = aDateString ? new Date(aDateString) : new Date()
     date.setDate(1)
-    const dayCount = dayCountPerMonth[date.getMonth()]
+    let dayCount = dayCountPerMonth[date.getMonth()]
     if (date.getMonth() === 1 && date.getFullYear() % 4 === 0) dayCount++
     const monthLastDay = new Date(`${date.getFullYear()}/${date.getMonth()+1}/${dayCount}`)
 
